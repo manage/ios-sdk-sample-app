@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ASTViewController : UIViewController
+- (IBAction)showAd:(id)sender;
+- (IBAction)precacheAd:(id)sender;
+- (IBAction)showPrecachedAd:(id)sender;
 
 @end
