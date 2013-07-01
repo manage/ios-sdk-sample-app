@@ -20,6 +20,7 @@
 @property (nonatomic, weak) UIViewController *parentController;
 @property (nonatomic, weak) id<ASPopupAdDelegate> delegate;
 @property (nonatomic, assign)BOOL testMode;
+@property (nonatomic, assign)BOOL devMode;
 
 -(ASPopupAdController*)initWithZoneId:(NSString*)adId;
 
