@@ -7,11 +7,16 @@
 
 #import "ViewController.h"
 #import <AppSponsorSDK/ASPopupAd.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 
 @property(nonatomic, strong) ASPopupAd * displayController;
 @property(nonatomic, strong) ASPopupAd * rewardedController;
+@property (weak, nonatomic) IBOutlet UIButton *showRewardedButton;
+@property (weak, nonatomic) IBOutlet UIButton *loadRewardedButton;
+@property (weak, nonatomic) IBOutlet UIButton *loadAdButton;
+@property (weak, nonatomic) IBOutlet UIButton *showAdButton;
 
 @end
 
@@ -28,6 +33,18 @@
     _displayController.delegate = self;
     _rewardedController.delegate = self;
     
+   
+    // Non-essential formatting
+    [self formatButton:_showRewardedButton];
+    [self formatButton:_loadRewardedButton];
+    [self formatButton:_loadAdButton];
+    [self formatButton:_showAdButton];
+}
+
+- (void)formatButton:(UIButton *)button
+{
+    [[button layer] setCornerRadius:5.0f];
+    [[button layer] setBorderWidth:0.5f];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,6 +54,7 @@
 }
 
 - (NSString*) getUID {
+    // Get your unique player id here for the serverside rewarded callback
     return @"ABCD";
 }
 
