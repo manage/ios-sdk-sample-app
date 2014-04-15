@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A759217818F5F0B9009381D4 /* AppSponsorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A759217718F5F0B9009381D4 /* AppSponsorSDK.framework */; };
 		A759217A18F6016C009381D4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A759217918F6016C009381D4 /* libz.dylib */; };
 		A759217C18F60173009381D4 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A759217B18F60173009381D4 /* libstdc++.dylib */; };
 		A759217E18F6017E009381D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A759217D18F6017E009381D4 /* AudioToolbox.framework */; };
@@ -36,6 +35,7 @@
 		A75921B118F60788009381D4 /* Icon-App-Store-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A75921A118F60788009381D4 /* Icon-App-Store-Selected@2x.png */; };
 		A75921B218F60788009381D4 /* Icon-App-Store.png in Resources */ = {isa = PBXBuildFile; fileRef = A75921A218F60788009381D4 /* Icon-App-Store.png */; };
 		A75921B318F60788009381D4 /* Icon-App-Store@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A75921A318F60788009381D4 /* Icon-App-Store@2x.png */; };
+		A788924A18FCB95000DA47DE /* AppSponsorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A788924918FCB95000DA47DE /* AppSponsorSDK.framework */; };
 		A7977F4D18F7140B00434F51 /* AS_Logo_Website.png.png in Resources */ = {isa = PBXBuildFile; fileRef = A7977F4A18F7140B00434F51 /* AS_Logo_Website.png.png */; };
 		A7977F4E18F7140B00434F51 /* bg_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = A7977F4B18F7140B00434F51 /* bg_bottom.png */; };
 		A7977F4F18F7140B00434F51 /* bg_top.png in Resources */ = {isa = PBXBuildFile; fileRef = A7977F4C18F7140B00434F51 /* bg_top.png */; };
@@ -67,7 +67,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A759217718F5F0B9009381D4 /* AppSponsorSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppSponsorSDK.framework; sourceTree = "<group>"; };
 		A759217918F6016C009381D4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A759217B18F60173009381D4 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		A759217D18F6017E009381D4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -97,6 +96,7 @@
 		A75921A118F60788009381D4 /* Icon-App-Store-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-Store-Selected@2x.png"; sourceTree = "<group>"; };
 		A75921A218F60788009381D4 /* Icon-App-Store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-Store.png"; sourceTree = "<group>"; };
 		A75921A318F60788009381D4 /* Icon-App-Store@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-Store@2x.png"; sourceTree = "<group>"; };
+		A788924918FCB95000DA47DE /* AppSponsorSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppSponsorSDK.framework; sourceTree = "<group>"; };
 		A7977F4A18F7140B00434F51 /* AS_Logo_Website.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AS_Logo_Website.png.png; sourceTree = "<group>"; };
 		A7977F4B18F7140B00434F51 /* bg_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_bottom.png; sourceTree = "<group>"; };
 		A7977F4C18F7140B00434F51 /* bg_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_top.png; sourceTree = "<group>"; };
@@ -127,7 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7977F5018F716BA00434F51 /* QuartzCore.framework in Frameworks */,
-				A7A765C918F5EAB800636B04 /* UIKit.framework in Frameworks */,
 				A759219218F601BE009381D4 /* CoreMotion.framework in Frameworks */,
 				A759219018F601B9009381D4 /* SystemConfiguration.framework in Frameworks */,
 				A759218E18F601B2009381D4 /* Accelerate.framework in Frameworks */,
@@ -137,11 +136,12 @@
 				A759218418F60193009381D4 /* StoreKit.framework in Frameworks */,
 				A759218218F6018C009381D4 /* CoreLocation.framework in Frameworks */,
 				A759218018F60185009381D4 /* AdSupport.framework in Frameworks */,
+				A788924A18FCB95000DA47DE /* AppSponsorSDK.framework in Frameworks */,
 				A759217E18F6017E009381D4 /* AudioToolbox.framework in Frameworks */,
 				A759217C18F60173009381D4 /* libstdc++.dylib in Frameworks */,
 				A759217A18F6016C009381D4 /* libz.dylib in Frameworks */,
+				A7A765C918F5EAB800636B04 /* UIKit.framework in Frameworks */,
 				A7A765C718F5EAB800636B04 /* CoreGraphics.framework in Frameworks */,
-				A759217818F5F0B9009381D4 /* AppSponsorSDK.framework in Frameworks */,
 				A7A765C518F5EAB800636B04 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +205,7 @@
 		A7A765C318F5EAB800636B04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A788924918FCB95000DA47DE /* AppSponsorSDK.framework */,
 				A759219118F601BE009381D4 /* CoreMotion.framework */,
 				A759218F18F601B9009381D4 /* SystemConfiguration.framework */,
 				A759218D18F601B2009381D4 /* Accelerate.framework */,
@@ -218,7 +219,6 @@
 				A759217D18F6017E009381D4 /* AudioToolbox.framework */,
 				A759217B18F60173009381D4 /* libstdc++.dylib */,
 				A759217918F6016C009381D4 /* libz.dylib */,
-				A759217718F5F0B9009381D4 /* AppSponsorSDK.framework */,
 				A7A765C418F5EAB800636B04 /* Foundation.framework */,
 				A7A765C618F5EAB800636B04 /* CoreGraphics.framework */,
 				A7A765C818F5EAB800636B04 /* UIKit.framework */,

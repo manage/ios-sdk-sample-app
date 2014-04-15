@@ -13,6 +13,8 @@
 
 @property(nonatomic, strong) ASPopupAd * displayController;
 @property(nonatomic, strong) ASPopupAd * rewardedController;
+
+
 @property (weak, nonatomic) IBOutlet UIButton *showRewardedButton;
 @property (weak, nonatomic) IBOutlet UIButton *loadRewardedButton;
 @property (weak, nonatomic) IBOutlet UIButton *loadAdButton;
@@ -28,7 +30,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     _displayController = [[ASPopupAd alloc] initWithZoneId:@"gnt8cORwCUCw_3cZeE12YA"];
-    _rewardedController = [[ASPopupAd alloc] initRewardedAdWithZoneId:@"w7J-JKpbf5QhC3Gyu6lvNg" andUserID:[self getUID] andOptions:nil];
+    _rewardedController = [[ASPopupAd alloc] initRewardedAdWithZoneId:@"w7J-JKpbf5QhC3Gyu6lvNg" andUserID:[self getUID]];
     
     _displayController.delegate = self;
     _rewardedController.delegate = self;

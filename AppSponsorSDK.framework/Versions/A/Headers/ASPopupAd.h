@@ -5,7 +5,7 @@
 //  Created by frank wang on 3/31/14.
 //  Copyright (c) 2014 manage. All rights reserved.
 //
-#define AS_SDK_VERSION                 @"2.2.6"
+#define AS_SDK_VERSION                 @"3.0.0"
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -46,8 +46,7 @@ typedef enum { AS_MALE = 1, AS_FEMALE = 2, AS_OTHER = 3 } Gender;
 
 -(ASPopupAd*)enableLocationSupport;
 -(ASPopupAd*)initWithZoneId:(NSString*)adId;
--(ASPopupAd*)initWithZoneId:(NSString*)adId andOptions:(NSDictionary*)initOptions;
--(ASPopupAd*)initRewardedAdWithZoneId:(NSString*)adId andUserID:(NSString*)uid andOptions:(NSDictionary*)initOptions;
+-(ASPopupAd*)initRewardedAdWithZoneId:(NSString*)adId andUserID:(NSString*)uid;
 
 /*
  * Preloads the ad.
@@ -69,7 +68,7 @@ typedef enum { AS_MALE = 1, AS_FEMALE = 2, AS_OTHER = 3 } Gender;
 /*
  * Return percentage of video ad played
  */
--(int) rewardedAdStatus;
+-(int)rewardedAdStatus;
 
 
 @end
