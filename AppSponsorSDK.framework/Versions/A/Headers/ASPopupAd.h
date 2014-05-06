@@ -5,7 +5,7 @@
 //  Created by frank wang on 3/31/14.
 //  Copyright (c) 2014 manage. All rights reserved.
 //
-#define AS_SDK_VERSION                 @"3.0.0"
+#define AS_SDK_VERSION                 @"3.0.2"
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -23,7 +23,7 @@ typedef enum { AS_MALE = 1, AS_FEMALE = 2, AS_OTHER = 3 } Gender;
 
 @interface ASPopupAd : NSObject
 @property (nonatomic, strong) NSString *zoneId;
-@property (nonatomic) UIViewController *parentController;
+@property (nonatomic, strong) UIViewController *parentController;
 @property (nonatomic, weak) id<ASPopupAdDelegate> delegate;
 //test mode is to force to show AppSponsor AD
 @property (nonatomic, assign) BOOL testMode;
@@ -42,6 +42,9 @@ typedef enum { AS_MALE = 1, AS_FEMALE = 2, AS_OTHER = 3 } Gender;
 @property (nonatomic, strong) NSString *longitude;
 @property (nonatomic, strong) NSString *latitude;
 @property (nonatomic, strong) NSString *pub_uid; //user id within publisher app
+
+//do not use
+@property (nonatomic, strong) NSString* pf;//platform info shows sdk runs on native, unity, adobe, corona
 
 
 -(ASPopupAd*)enableLocationSupport;
