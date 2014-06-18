@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *loadAdButton;
 @property (weak, nonatomic) IBOutlet UIButton *showAdButton;
 
+
 @end
 
 @implementation ViewController
@@ -106,4 +107,8 @@
     
 }
 
+- (void)viewDidUnload {
+    [self setShowAdButton:nil];
+    [super viewDidUnload];
+}
 @end
