@@ -51,7 +51,6 @@
 		A7A765D518F5EAB800636B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A765D418F5EAB800636B04 /* AppDelegate.m */; };
 		A7A765DE18F5EAB800636B04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A765DD18F5EAB800636B04 /* ViewController.m */; };
 		A7A765E018F5EAB800636B04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A765DF18F5EAB800636B04 /* Images.xcassets */; };
-		A7A765E718F5EAB800636B04 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A765E618F5EAB800636B04 /* XCTest.framework */; };
 		A7A765E818F5EAB800636B04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A765C418F5EAB800636B04 /* Foundation.framework */; };
 		A7A765E918F5EAB800636B04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A765C818F5EAB800636B04 /* UIKit.framework */; };
 		A7A765F118F5EAB800636B04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7A765EF18F5EAB800636B04 /* InfoPlist.strings */; };
@@ -118,7 +117,6 @@
 		A7A765DD18F5EAB800636B04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A7A765DF18F5EAB800636B04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A7A765E518F5EAB800636B04 /* SampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7A765E618F5EAB800636B04 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A7A765EE18F5EAB800636B04 /* SampleAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleAppTests-Info.plist"; sourceTree = "<group>"; };
 		A7A765F018F5EAB800636B04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7A765F218F5EAB800636B04 /* SampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleAppTests.m; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7A765E718F5EAB800636B04 /* XCTest.framework in Frameworks */,
 				A7A765E918F5EAB800636B04 /* UIKit.framework in Frameworks */,
 				A7A765E818F5EAB800636B04 /* Foundation.framework in Frameworks */,
 			);
@@ -226,7 +223,6 @@
 				A7A765C418F5EAB800636B04 /* Foundation.framework */,
 				A7A765C618F5EAB800636B04 /* CoreGraphics.framework */,
 				A7A765C818F5EAB800636B04 /* UIKit.framework */,
-				A7A765E618F5EAB800636B04 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
