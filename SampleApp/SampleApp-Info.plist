@@ -27,7 +27,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>main_iphone</string>
 	<key>UIMainStoryboardFile~ipad</key>
-	<string>main_iphone</string>
+	<string>main_ipad</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

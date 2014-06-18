@@ -68,6 +68,7 @@
 - (IBAction)onClick:(id)sender {
     [_displayController presentAd];
 }
+
 - (IBAction)onRewardedLoadClick:(id)sender {
     [_rewardedController load];
 }
