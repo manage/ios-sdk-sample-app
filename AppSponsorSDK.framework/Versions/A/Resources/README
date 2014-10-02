@@ -1,0 +1,2 @@
+Be sure to uncomment #define DEBUG in the pch
+Data will be logged to wrong server if it is not.
