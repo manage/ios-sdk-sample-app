@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController<ASPopupAdDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextView *callbackLogs;
+
 @end

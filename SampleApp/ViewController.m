@@ -4,22 +4,42 @@
 //
 //  Copyright (c) 2014 Appsponsor.com. All rights reserved.
 //
+//
+//  ViewController.m
+//  SDKBasicTest
+//
+//  Created by Frank Wang on 10/11/13.
+//  Copyright (c) 2013 manage. All rights reserved.
+//
 
 #import "ViewController.h"
-#import <AppSponsorSDK/ASPopupAd.h>
-#import <QuartzCore/QuartzCore.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController ()
+/*
+ 614 gnt8cORwCUCw_3cZeE12YA  | 1 | display + vast + voxel
+ 615 ch3-P08b-J-iCA23Te8NjA  | 2 | display only
+ 616 _gzIZwsW-GPpQKjlvxmjeQ  | 3 | performance video
+ 617 kN41Qiw0U40pJ9qEKNh3lA  | 4 | rewarded playable (voxel)
+ 618 w7J-JKpbf5QhC3Gyu6lvNg  | 5 | rewarded ad combined
+ */
 
-@property(nonatomic, strong) ASPopupAd * displayController;
-@property(nonatomic, strong) ASPopupAd * rewardedController;
+#define AD_ZONE_1 @"gnt8cORwCUCw_3cZeE12YA" //
+#define AD_ZONE_2 @"ch3-P08b-J-iCA23Te8NjA" //
+#define AD_ZONE_3 @"_gzIZwsW-GPpQKjlvxmjeQ" //
+#define AD_ZONE_4 @"kN41Qiw0U40pJ9qEKNh3lA" //
+#define AD_ZONE_5 @"w7J-JKpbf5QhC3Gyu6lvNg" //
 
 
-@property (weak, nonatomic) IBOutlet UIButton *showRewardedButton;
-@property (weak, nonatomic) IBOutlet UIButton *loadRewardedButton;
-@property (weak, nonatomic) IBOutlet UIButton *loadAdButton;
-@property (weak, nonatomic) IBOutlet UIButton *showAdButton;
+@interface ViewController () <CLLocationManagerDelegate>
+@property(nonatomic, strong) ASPopupAd * controller_1;
+@property(nonatomic, strong) ASPopupAd * controller_2;
+@property(nonatomic, strong) ASPopupAd * controller_3;
+@property(nonatomic, strong) ASPopupAd * controller_4;
+@property(nonatomic, strong) ASPopupAd * controller_5;
+@property(nonatomic) int adCount;
 
+@property(nonatomic) int adType;
+@property (weak, nonatomic) IBOutlet UILabel *labSDKVersion;
 
 @end
 
@@ -28,27 +48,42 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
-    //Once you sign up at AppSponsor.com, you can create zone and get zone id. Rewarded ad type can be set at zone configuration page.
-    _displayController = [[ASPopupAd alloc] initWithZoneId:@"gnt8cORwCUCw_3cZeE12YA"];
-    _rewardedController = [[ASPopupAd alloc] initRewardedAdWithZoneId:@"w7J-JKpbf5QhC3Gyu6lvNg" andUserID:[self getUID]];
+    CLLocationManager* locationManager = [[CLLocationManager alloc] init];
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    //    locationManager.delegate = self;
+    [locationManager startUpdatingLocation];
     
-    //link delegates
-    _displayController.delegate = self;
-    _rewardedController.delegate = self;
-   
-    // Non-essential formatting
-    [self formatButton:_showRewardedButton];
-    [self formatButton:_loadRewardedButton];
-    [self formatButton:_loadAdButton];
-    [self formatButton:_showAdButton];
-}
-
-- (void)formatButton:(UIButton *)button
-{
-    [[button layer] setCornerRadius:5.0f];
-    [[button layer] setBorderWidth:0.5f];
+    NSMutableDictionary *options = [NSMutableDictionary dictionary];
+    
+    //    [options setObject:@"NO" forKey:@"precache_at_init"];
+    [options setObject:@"USA" forKey:@"country"];
+    
+    self.controller_1 = [[[ASPopupAd alloc] enableLocationSupport] initWithZoneId:AD_ZONE_1];
+    self.controller_1.parentController = self;
+    
+    
+    NSMutableDictionary *options2 = [NSMutableDictionary dictionary];
+    
+    [options2 setObject:@"NO" forKey:@"precache_at_init"];
+    [options2 setObject:@"USA" forKey:@"country"];
+    
+    self.controller_2 = [[ASPopupAd alloc] initWithZoneId:AD_ZONE_2];
+    
+    self.controller_3 = [[ASPopupAd alloc] initRewardedAdWithZoneId:AD_ZONE_3 andUserID:@"PUBLISHER_ID_123"];
+    self.controller_4 = [[ASPopupAd alloc] initRewardedAdWithZoneId:AD_ZONE_4 andUserID:@"PUBLISHER_ID_123"];
+    self.controller_5 = [[ASPopupAd alloc] initRewardedAdWithZoneId:AD_ZONE_5 andUserID:@"PUBLISHER_ID_123"];
+    
+    self.controller_1.delegate = self; //important
+    self.controller_2.delegate = self; //important
+    
+    self.controller_3.delegate = self; //important
+    self.controller_4.delegate = self; //important
+    self.controller_5.delegate = self; //important
+    
+    self.adCount = 0;
+    
+    self.labSDKVersion.text = AS_SDK_VERSION;
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,25 +92,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSString*) getUID {
-    //This user id required for rewarded ad. And it is passed to server-to-server call back url, so game back end knows who finishes a rewarded ad.
-    return @"ABCD";
+- (IBAction)loadAd:(id)sender {
+    self.adType = 1;
+    [self.controller_1 load];
 }
 
-#pragma mark -- functions for ui elements
-
-- (IBAction)onLoadClick:(id)sender {
-    //load(cache) ad content
-    [_displayController load];
-}
-
-- (IBAction)onClick:(id)sender {
-    if ([_displayController isReady] ) {
-        //display ad if the ad content is ready
-        [_displayController presentAd];
+- (IBAction)presentAd:(id)sender {
+    if ([self.controller_1 isReady]) {
+        self.adType = 1;
+        [self.controller_1 presentAd];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"Ad is not ready, Please load it first"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops"
+                                                        message:@"ad 1 is not ready yet, please try load it again."
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
@@ -83,23 +111,23 @@
     }
 }
 
--(void)popoverDidFailToLoadWithError:(NSError*)error{
-//something went wrong with AppSponsor ad
+- (IBAction)loadAndPresentAd:(id)sender {
+    self.adType = 1;
+    [self.controller_1 loadAndPresentAdWithTimeout:1.1f];
 }
 
-
-- (IBAction)onRewardedLoadClick:(id)sender {
-    //load(cache) ad content
-    [_rewardedController load];
+- (IBAction)loadAd2:(id)sender {
+    self.adType = 2;
+    [self.controller_2 load];
 }
 
-- (IBAction)onRewardedClick:(id)sender {
-    if ([_rewardedController isReady]) {
-        //display ad if the ad content is ready
-        [_rewardedController presentAd];
+- (IBAction)presentAd2:(id)sender {
+    if ([self.controller_2 isReady]) {
+        self.adType = 2;
+        [self.controller_2 presentAd];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"Ad is not ready, please load it first"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops"
+                                                        message:@"ad 2 is not ready yet, please try load it again."
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
@@ -107,44 +135,177 @@
     }
 }
 
-#pragma mark -- SDK delegates
-
--(void)popoverWillAppear{
-    NSLog(@"popoverWillAppear");
-    //This function calls before ad shows up, you can pause your game/app here
+- (IBAction)loadAndPresentAd2:(id)sender {
+    self.adType = 2;
+    [self.controller_2 loadAndPresentAd];
 }
 
--(void)popoverWillDisappear:(NSString*) reason{
-    NSLog(@"popoverWillDisappear");
-    //This function calls before ad disappears, you can resume your game/app here
+- (IBAction)loadAd3:(id)sender {
+    self.adType = 3;
+    [self.controller_3 load];
 }
 
-
--(void)didCacheInterstitial{
-    //call back function indicates ad content has been cached
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Available"
-                                                    message:@"Ad Loaded"
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
-
+- (IBAction)presentAd3:(id)sender {
+    if ([self.controller_3 isReady]) {
+        self.adType = 3;
+        [self.controller_3 presentAd];
+        
+        double delayInSeconds = 2.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            //code to be executed on the main queue after delay
+            [self loadAd3:nil];
+        });
+        
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops"
+                                                        message:@"ad 3 is not ready yet, please try load it again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
+- (IBAction)loadAndPresentAd3:(id)sender {
+    self.adType = 3;
+    [self.controller_3 loadAndPresentAd];
+}
 
--(void)onRewardedAdFinished{
-    //call back function triggers by SDK once rewarded ad finishes play.
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Rewarded!"
-                                                    message:@"Rewarded Ad Completed! Award Reward here"
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+- (IBAction)loadAd4:(id)sender {
+    self.adType = 4;
+    [self.controller_4 load];
     
 }
 
-- (void)viewDidUnload {
-    [self setShowAdButton:nil];
-    [super viewDidUnload];
+- (IBAction)presentAd4:(id)sender {
+    
+    if ([self.controller_4 isReady]) {
+        self.adType = 4;
+        [self.controller_4 presentAd];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops"
+                                                        message:@"ad 4 is not ready yet, please try load it again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
+
+- (IBAction)loadAndPresentAd4:(id)sender {
+    self.adType = 4;
+    [self.controller_4 loadAndPresentAd];
+}
+
+- (IBAction)loadAd5:(id)sender {
+    self.adType = 5;
+    [self.controller_5 load];
+}
+
+- (IBAction)presentAd5:(id)sender {
+    if ([self.controller_5 isReady]) {
+        self.adType = 5;
+        [self.controller_5 presentAd];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops"
+                                                        message:@"ad 5 is not ready yet, please try load it again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+- (IBAction)loadAndPresentAd5:(id)sender {
+    self.adType = 5;
+    [self.controller_5 loadAndPresentAd];
+}
+
+-(void)popoverWillAppear{
+    NSLog(@"popoverWillAppear");
+    self.adCount = self.adCount + 1;
+    [self appendTologWithMessage:[NSString stringWithFormat:@"\n--------- ad %d ------------", self.adCount]];
+    [self appendTologWithMessage:@"popoverWillAppear"];
+}
+
+-(void)popoverWillDisappear:(NSString*) reason{
+    
+    NSLog(@"popoverWillDisappear");
+    [self appendTologWithMessage:[NSString stringWithFormat:@"popoverWillDisappear with reason: %@", reason]];
+}
+
+-(void)didCacheInterstitial{
+    NSLog(@"didCacheInterstitial is triggered?");
+    [self appendTologWithMessage:@"\ndidCacheInterstitial"];
+    
+    //    switch (self.adType) {
+    //        case 1:
+    //            [self.controller_1 presentAd];
+    //            break;
+    //        case 2:
+    //            [self.controller_2 presentAd];
+    //            break;
+    //        case 3:
+    //            [self.controller_3 presentAd];
+    //            break;
+    //        case 4:
+    //            [self.controller_4 presentAd];
+    //            break;
+    //        case 5:
+    //            [self.controller_5 presentAd];
+    //            break;
+    //        default:
+    //            break;
+    //    }
+}
+
+-(void)popoverDidFailToLoadWithError:(NSError*)error{
+    NSLog(@"popoverDidFailToLoadWithError");
+    [self appendTologWithMessage:[NSString stringWithFormat:@"popoverDidFailToLoadWithError %@", error]];
+}
+
+-(void)onRewardedAdFinished{
+    [self appendTologWithMessage:@"onRewardedAdFinished"];
+    
+    int finished = 0;
+    switch (self.adType) {
+        case 1:
+            finished = self.controller_1.rewardedAdStatus;
+            break;
+        case 2:
+            finished = self.controller_2.rewardedAdStatus;
+            break;
+        case 3:
+            finished = self.controller_3.rewardedAdStatus;
+            break;
+        case 4:
+            finished = self.controller_4.rewardedAdStatus;
+            break;
+        case 5:
+            finished = self.controller_5.rewardedAdStatus;
+            break;
+        default:
+            break;
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congratulation"
+                                                    message:[NSString stringWithFormat:@"You have earned 10 coins finished %d!", finished]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+-(void) appendTologWithMessage:(NSString*) msg{
+    self.callbackLogs.text = [NSString stringWithFormat:@"%@\n%@", self.callbackLogs.text, msg];
+    NSRange bottom = NSMakeRange(self.callbackLogs.text.length -1, 1);
+    [self.callbackLogs scrollRangeToVisible:bottom];
+    
+}
+
 @end
