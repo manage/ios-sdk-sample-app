@@ -1,20 +1,23 @@
-#iOS INTEGRATION GUIDE
+# iOS INTEGRATION GUIDE
 
+### Overview
 
-###Overview
 This guide provides integration instructions for the Manage Publisher iOS SDK.  If you need support or have any questions, feel free to email us at [support@appponsor.com](support@appsponsor.com)
 
-###1. Download and install the SDK
-The SDK for iOS is available once you [sign up](https://www.appsponsor.com/user/registration).  The Manage Publisher SDK includes everything you need to serve full screen interstitial, video, and playable ad units.
+### 1. Download and install the SDK
 
-**Requirements**:
+The SDK for iOS is available once you [sign up](https://www.appsponsor.com/user/registration). The Manage Publisher SDK includes everything you need to serve full screen interstitial, video, and playable ad units.
+
+* Requirements:
 
 - Apps must be compiled with iOS SDK version 6.0 or higher (may still target 5.0+)
 - Runs only on devices with iOS SDK version 6.0 or higher
 
-A Sample Xcode App is available at https://github.com/manage/ios-sdk-sample-app
+The SDK for Unity can be downloaded here: [ManageSDK-iOS-v3.1.zip](/downloads/ManageSDK-iOS-v3.1.zip).
 
-###2. Installing the SDK
+For an example, please see our [sample app](https://github.com/manage/ios-sdk-sample-app).
+
+### 2. Installing the SDK
 
 1. To get started, unzip the SDK package and drag the **AppSponsorSDK.framework** onto your project's name in Xcode's Project Navigator:
 
@@ -52,7 +55,7 @@ A Sample Xcode App is available at https://github.com/manage/ios-sdk-sample-app
 
   ![](https://s3.amazonaws.com/cdn.manage.com/appsponsor/documentation/ios/step-4.png)
 
-###3. Integrating Ads
+### 3. Integrating Manage SDK
 
 1. Import the Manage SDK:
 
@@ -87,7 +90,7 @@ self.adController = [[[ASPopupAd alloc] enableLocationSupport] initWithZoneId:@"
 self.rewaredAdController = [[ASPopupAd alloc enableLocationSupport] initRewardedAdWithZoneId:@"YOUR ZONE ID" andUserID:@"PUBLISHER USER ID"];
 ```
 
-###3.1. Improve Ad Targeting by setting non PII user data:
+#### 3.1. Improve Ad Targeting by setting non PII user data:
 
 ```
 @property(nonatomic, assign)NSString *country;
@@ -107,6 +110,7 @@ self.rewaredAdController = [[ASPopupAd alloc enableLocationSupport] initRewarded
 ```
 
 For example:
+
 ```
 self.adController.gender = "M";
 self.adController.country = @"USA";
@@ -114,7 +118,7 @@ self.adController.city = @"San Francisco";
 self.adController.keywords = @"game,shopping";
 ```
 
-###3.2 Pre-Cached Ads 
+#### 3.2 Pre-Cached Ads 
 
 ```
 [self.adController load];
@@ -136,7 +140,7 @@ if ([self.rewaredAdController isReady]) {
 }
 ```
 
-###3.3 Load and Present Ad Synchronously
+#### 3.3 Load and Present Ad Synchronously
 
 ```
 [self.adController loadAndPresentAd];
@@ -147,7 +151,7 @@ if ([self.rewaredAdController isReady]) {
 
 ```
 
-###4. Optional steps: Delegate Methods
+### 4. Optional steps: Delegate Methods
 
 AppSponsor SDK has delegate methods that are useful for controlling the ad state.
 
