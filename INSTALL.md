@@ -15,7 +15,7 @@ The SDK for iOS is available once you [sign up](https://www.appsponsor.com/user/
 
 The SDK for Unity can be downloaded here: [ManageSDK-iOS-v3.1.zip](/downloads/ManageSDK-iOS-v3.1.zip).
 
-For an example, please see our [sample app](https://github.com/manage/ios-sdk-sample-app).
+To see an example implementation, please see our [sample app](https://github.com/manage/ios-sdk-sample-app).
 
 ### 2. Installing the SDK
 
@@ -146,12 +146,13 @@ if ([self.rewaredAdController isReady]) {
 [self.adController loadAndPresentAd];
 
 /* Rewarded ad */
-
 [self.rewaredAdController loadAndPresentAd];
 
 ```
 
-### 4. Optional steps: Delegate Methods
+### 4. Optional steps
+
+#### Delegate Methods
 
 AppSponsor SDK has delegate methods that are useful for controlling the ad state.
 
@@ -159,7 +160,7 @@ Declare your controller support ASPopupAdDelegate, then implement these function
 
 Before using any delegates, you should set the delegate. A good place to add this is the same place you initialize Manage SDK.
 
-1. These following delegates may be triggered after the `load` function:
+1. These following delegates may be triggered after the `load()` function:
 
 ```
 -(void)didCacheInterstitial;
@@ -167,7 +168,7 @@ Before using any delegates, you should set the delegate. A good place to add thi
 -(void)popoverDidFailToLoadWithError:(NSError*)error;
 ```
 
-2. These following delegates will always be triggered after the `presentAd` function:
+2. These following delegates will always be triggered after the `presentAd()` function:
 
 ```
 -(void)popoverWillAppear;
@@ -185,12 +186,13 @@ For example:
 
 ```
 -(void)onRewardedAdFinished {
- if ([self.rewardedAdController rewardedAdStatus] >= 75) {
-  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congratulations"
-  message:@"You have earned coins!"
-  delegate: nil
-  cancelButtonTitle: @"OK"
-  otherButtonTitles: nil];
-  [alert show];
+    if ([self.rewardedAdController rewardedAdStatus] >= 75) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Congratulations"
+        message:@"You have earned coins!"
+        delegate: nil
+        cancelButtonTitle: @"OK"
+        otherButtonTitles: nil];
+        [alert show];
+    }
 }
 ```
