@@ -13,7 +13,7 @@ The SDK for iOS is available once you [sign up](https://www.appsponsor.com/user/
 - Apps must be compiled with iOS SDK version 6.0 or higher (may still target 5.0+)
 - Runs only on devices with iOS SDK version 6.0 or higher
 
-The SDK for Unity can be downloaded here: [ManageSDK-iOS-v3.1.zip](/downloads/ManageSDK-iOS-v3.1.zip).
+The SDK can be downloaded here: [ManageSDK-iOS-v3.1.zip](/downloads/ManageSDK-iOS-v3.1.zip).
 
 To see an example implementation, please see our [sample app](https://github.com/manage/ios-sdk-sample-app).
 
