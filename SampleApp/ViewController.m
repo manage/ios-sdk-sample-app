@@ -17,16 +17,16 @@
 
 /*
  614 gnt8cORwCUCw_3cZeE12YA  | 1 | display + vast + voxel
- 615 ch3-P08b-J-iCA23Te8NjA  | 2 | display only
- 616 _gzIZwsW-GPpQKjlvxmjeQ  | 3 | performance video
- 617 kN41Qiw0U40pJ9qEKNh3lA  | 4 | rewarded playable (voxel)
+ 615 8Oeos2m9Z8HNQ0pMQkCqig  | 2 | display only
+ 616 oNAnx6m1fGcQHZ6aLw4_9w  | 3 | performance video
+ 617 DNROlQlIcD4T8VR_lrNzKg  | 4 | experience
  618 w7J-JKpbf5QhC3Gyu6lvNg  | 5 | rewarded ad combined
  */
 
 #define AD_ZONE_1 @"gnt8cORwCUCw_3cZeE12YA" //
-#define AD_ZONE_2 @"ch3-P08b-J-iCA23Te8NjA" //
-#define AD_ZONE_3 @"_gzIZwsW-GPpQKjlvxmjeQ" //
-#define AD_ZONE_4 @"kN41Qiw0U40pJ9qEKNh3lA" //
+#define AD_ZONE_2 @"8Oeos2m9Z8HNQ0pMQkCqig" //
+#define AD_ZONE_3 @"oNAnx6m1fGcQHZ6aLw4_9w" //
+#define AD_ZONE_4 @"DNROlQlIcD4T8VR_lrNzKg" //
 #define AD_ZONE_5 @"w7J-JKpbf5QhC3Gyu6lvNg" //
 
 
@@ -57,7 +57,7 @@
     NSMutableDictionary *options = [NSMutableDictionary dictionary];
     
     //    [options setObject:@"NO" forKey:@"precache_at_init"];
-    [options setObject:@"USA" forKey:@"country"];
+    //[options setObject:@"USA" forKey:@"country"];
     
     self.controller_1 = [[[ASPopupAd alloc] enableLocationSupport] initWithZoneId:AD_ZONE_1];
     self.controller_1.parentController = self;

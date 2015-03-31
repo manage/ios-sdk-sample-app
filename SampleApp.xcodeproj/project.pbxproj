@@ -7,25 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EF7F2A319DD6C940018FD9F /* AppSponsorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF7F2A219DD6C940018FD9F /* AppSponsorSDK.framework */; };
-		4EF7F2B719DD6C990018FD9F /* AppSponsorSDKFramework-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2A519DD6C990018FD9F /* AppSponsorSDKFramework-Info.plist */; };
-		4EF7F2B819DD6C990018FD9F /* ASCloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2A619DD6C990018FD9F /* ASCloseButton.png */; };
-		4EF7F2B919DD6C990018FD9F /* ASCloseButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2A719DD6C990018FD9F /* ASCloseButton@2x.png */; };
-		4EF7F2BA19DD6C990018FD9F /* ASFrameLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2A819DD6C990018FD9F /* ASFrameLandscape.png */; };
-		4EF7F2BB19DD6C990018FD9F /* ASFrameLandscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2A919DD6C990018FD9F /* ASFrameLandscape@2x.png */; };
-		4EF7F2BC19DD6C990018FD9F /* ASFramePortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2AA19DD6C990018FD9F /* ASFramePortrait.png */; };
-		4EF7F2BD19DD6C990018FD9F /* ASFramePortrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2AB19DD6C990018FD9F /* ASFramePortrait@2x.png */; };
-		4EF7F2BE19DD6C990018FD9F /* ASFrameSmallLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2AC19DD6C990018FD9F /* ASFrameSmallLandscape.png */; };
-		4EF7F2BF19DD6C990018FD9F /* ASFrameSmallLandscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2AD19DD6C990018FD9F /* ASFrameSmallLandscape@2x.png */; };
-		4EF7F2C019DD6C990018FD9F /* ASFrameSmallPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2AE19DD6C990018FD9F /* ASFrameSmallPortrait.png */; };
-		4EF7F2C119DD6C990018FD9F /* ASFrameSmallPortrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2AF19DD6C990018FD9F /* ASFrameSmallPortrait@2x.png */; };
-		4EF7F2C219DD6C990018FD9F /* close_game.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2B019DD6C990018FD9F /* close_game.png */; };
-		4EF7F2C319DD6C990018FD9F /* close_game@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2B119DD6C990018FD9F /* close_game@2x.png */; };
-		4EF7F2C419DD6C990018FD9F /* Icon-App-Store-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2B219DD6C990018FD9F /* Icon-App-Store-Selected.png */; };
-		4EF7F2C519DD6C990018FD9F /* Icon-App-Store-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2B319DD6C990018FD9F /* Icon-App-Store-Selected@2x.png */; };
-		4EF7F2C619DD6C990018FD9F /* Icon-App-Store.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2B419DD6C990018FD9F /* Icon-App-Store.png */; };
-		4EF7F2C719DD6C990018FD9F /* Icon-App-Store@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2B519DD6C990018FD9F /* Icon-App-Store@2x.png */; };
-		4EF7F2C819DD6C990018FD9F /* README in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2B619DD6C990018FD9F /* README */; };
 		4EF7F2CA19DD6D570018FD9F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2C919DD6D570018FD9F /* MainStoryboard_iPhone.storyboard */; };
 		A759217A18F6016C009381D4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A759217918F6016C009381D4 /* libz.dylib */; };
 		A759217C18F60173009381D4 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A759217B18F60173009381D4 /* libstdc++.dylib */; };
@@ -68,25 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4EF7F2A219DD6C940018FD9F /* AppSponsorSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppSponsorSDK.framework; path = AppSponsorSDK.embeddedframework/AppSponsorSDK.framework; sourceTree = "<group>"; };
-		4EF7F2A519DD6C990018FD9F /* AppSponsorSDKFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "AppSponsorSDKFramework-Info.plist"; sourceTree = "<group>"; };
-		4EF7F2A619DD6C990018FD9F /* ASCloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ASCloseButton.png; sourceTree = "<group>"; };
-		4EF7F2A719DD6C990018FD9F /* ASCloseButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASCloseButton@2x.png"; sourceTree = "<group>"; };
-		4EF7F2A819DD6C990018FD9F /* ASFrameLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ASFrameLandscape.png; sourceTree = "<group>"; };
-		4EF7F2A919DD6C990018FD9F /* ASFrameLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASFrameLandscape@2x.png"; sourceTree = "<group>"; };
-		4EF7F2AA19DD6C990018FD9F /* ASFramePortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ASFramePortrait.png; sourceTree = "<group>"; };
-		4EF7F2AB19DD6C990018FD9F /* ASFramePortrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASFramePortrait@2x.png"; sourceTree = "<group>"; };
-		4EF7F2AC19DD6C990018FD9F /* ASFrameSmallLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ASFrameSmallLandscape.png; sourceTree = "<group>"; };
-		4EF7F2AD19DD6C990018FD9F /* ASFrameSmallLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASFrameSmallLandscape@2x.png"; sourceTree = "<group>"; };
-		4EF7F2AE19DD6C990018FD9F /* ASFrameSmallPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ASFrameSmallPortrait.png; sourceTree = "<group>"; };
-		4EF7F2AF19DD6C990018FD9F /* ASFrameSmallPortrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ASFrameSmallPortrait@2x.png"; sourceTree = "<group>"; };
-		4EF7F2B019DD6C990018FD9F /* close_game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_game.png; sourceTree = "<group>"; };
-		4EF7F2B119DD6C990018FD9F /* close_game@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_game@2x.png"; sourceTree = "<group>"; };
-		4EF7F2B219DD6C990018FD9F /* Icon-App-Store-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-Store-Selected.png"; sourceTree = "<group>"; };
-		4EF7F2B319DD6C990018FD9F /* Icon-App-Store-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-Store-Selected@2x.png"; sourceTree = "<group>"; };
-		4EF7F2B419DD6C990018FD9F /* Icon-App-Store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-Store.png"; sourceTree = "<group>"; };
-		4EF7F2B519DD6C990018FD9F /* Icon-App-Store@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-Store@2x.png"; sourceTree = "<group>"; };
-		4EF7F2B619DD6C990018FD9F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		4EF7F2C919DD6D570018FD9F /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		A759217918F6016C009381D4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A759217B18F60173009381D4 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
@@ -138,7 +100,6 @@
 				A759218418F60193009381D4 /* StoreKit.framework in Frameworks */,
 				A759218218F6018C009381D4 /* CoreLocation.framework in Frameworks */,
 				A759218018F60185009381D4 /* AdSupport.framework in Frameworks */,
-				4EF7F2A319DD6C940018FD9F /* AppSponsorSDK.framework in Frameworks */,
 				A759217E18F6017E009381D4 /* AudioToolbox.framework in Frameworks */,
 				A759217C18F60173009381D4 /* libstdc++.dylib in Frameworks */,
 				A759217A18F6016C009381D4 /* libz.dylib in Frameworks */,
@@ -160,36 +121,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4EF7F2A419DD6C990018FD9F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4EF7F2A519DD6C990018FD9F /* AppSponsorSDKFramework-Info.plist */,
-				4EF7F2A619DD6C990018FD9F /* ASCloseButton.png */,
-				4EF7F2A719DD6C990018FD9F /* ASCloseButton@2x.png */,
-				4EF7F2A819DD6C990018FD9F /* ASFrameLandscape.png */,
-				4EF7F2A919DD6C990018FD9F /* ASFrameLandscape@2x.png */,
-				4EF7F2AA19DD6C990018FD9F /* ASFramePortrait.png */,
-				4EF7F2AB19DD6C990018FD9F /* ASFramePortrait@2x.png */,
-				4EF7F2AC19DD6C990018FD9F /* ASFrameSmallLandscape.png */,
-				4EF7F2AD19DD6C990018FD9F /* ASFrameSmallLandscape@2x.png */,
-				4EF7F2AE19DD6C990018FD9F /* ASFrameSmallPortrait.png */,
-				4EF7F2AF19DD6C990018FD9F /* ASFrameSmallPortrait@2x.png */,
-				4EF7F2B019DD6C990018FD9F /* close_game.png */,
-				4EF7F2B119DD6C990018FD9F /* close_game@2x.png */,
-				4EF7F2B219DD6C990018FD9F /* Icon-App-Store-Selected.png */,
-				4EF7F2B319DD6C990018FD9F /* Icon-App-Store-Selected@2x.png */,
-				4EF7F2B419DD6C990018FD9F /* Icon-App-Store.png */,
-				4EF7F2B519DD6C990018FD9F /* Icon-App-Store@2x.png */,
-				4EF7F2B619DD6C990018FD9F /* README */,
-			);
-			name = Resources;
-			path = AppSponsorSDK.embeddedframework/Resources;
-			sourceTree = "<group>";
-		};
 		A7A765B818F5EAB800636B04 = {
 			isa = PBXGroup;
 			children = (
-				4EF7F2A419DD6C990018FD9F /* Resources */,
 				A7A765CA18F5EAB800636B04 /* SampleApp */,
 				A7A765EC18F5EAB800636B04 /* SampleAppTests */,
 				A7A765C318F5EAB800636B04 /* Frameworks */,
@@ -209,7 +143,6 @@
 		A7A765C318F5EAB800636B04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4EF7F2A219DD6C940018FD9F /* AppSponsorSDK.framework */,
 				A759219118F601BE009381D4 /* CoreMotion.framework */,
 				A759218F18F601B9009381D4 /* SystemConfiguration.framework */,
 				A759218D18F601B2009381D4 /* Accelerate.framework */,
@@ -324,9 +257,10 @@
 				ORGANIZATIONNAME = Appsponsor.com;
 				TargetAttributes = {
 					A7A765C018F5EAB800636B04 = {
-						DevelopmentTeam = 9RD848Q2BZ;
+						DevelopmentTeam = GY9EJ48J5F;
 					};
 					A7A765E418F5EAB800636B04 = {
+						DevelopmentTeam = GY9EJ48J5F;
 						TestTargetID = A7A765C018F5EAB800636B04;
 					};
 				};
@@ -355,30 +289,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF7F2BA19DD6C990018FD9F /* ASFrameLandscape.png in Resources */,
-				4EF7F2BD19DD6C990018FD9F /* ASFramePortrait@2x.png in Resources */,
 				A7977F4E18F7140B00434F51 /* bg_bottom.png in Resources */,
-				4EF7F2C719DD6C990018FD9F /* Icon-App-Store@2x.png in Resources */,
 				A7A765E018F5EAB800636B04 /* Images.xcassets in Resources */,
 				A7977F4D18F7140B00434F51 /* AS_Logo_Website.png.png in Resources */,
 				4EF7F2CA19DD6D570018FD9F /* MainStoryboard_iPhone.storyboard in Resources */,
-				4EF7F2B719DD6C990018FD9F /* AppSponsorSDKFramework-Info.plist in Resources */,
 				A7977F4F18F7140B00434F51 /* bg_top.png in Resources */,
-				4EF7F2BB19DD6C990018FD9F /* ASFrameLandscape@2x.png in Resources */,
-				4EF7F2BC19DD6C990018FD9F /* ASFramePortrait.png in Resources */,
-				4EF7F2B919DD6C990018FD9F /* ASCloseButton@2x.png in Resources */,
-				4EF7F2C619DD6C990018FD9F /* Icon-App-Store.png in Resources */,
 				A7A765CF18F5EAB800636B04 /* InfoPlist.strings in Resources */,
-				4EF7F2C419DD6C990018FD9F /* Icon-App-Store-Selected.png in Resources */,
-				4EF7F2C519DD6C990018FD9F /* Icon-App-Store-Selected@2x.png in Resources */,
-				4EF7F2BF19DD6C990018FD9F /* ASFrameSmallLandscape@2x.png in Resources */,
-				4EF7F2C119DD6C990018FD9F /* ASFrameSmallPortrait@2x.png in Resources */,
-				4EF7F2BE19DD6C990018FD9F /* ASFrameSmallLandscape.png in Resources */,
-				4EF7F2C219DD6C990018FD9F /* close_game.png in Resources */,
-				4EF7F2C819DD6C990018FD9F /* README in Resources */,
-				4EF7F2C019DD6C990018FD9F /* ASFrameSmallPortrait.png in Resources */,
-				4EF7F2C319DD6C990018FD9F /* close_game@2x.png in Resources */,
-				4EF7F2B819DD6C990018FD9F /* ASCloseButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +434,7 @@
 		A7A765F718F5EAB800636B04 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -525,7 +442,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/AppSponsorSDK.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleApp/SampleApp-Prefix.pch";
@@ -541,6 +457,7 @@
 		A7A765F818F5EAB800636B04 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -548,7 +465,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/AppSponsorSDK.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleApp/SampleApp-Prefix.pch";
