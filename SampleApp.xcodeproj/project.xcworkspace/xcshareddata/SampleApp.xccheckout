@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>34FB593E8AD806CA4A2DF2B6DBE5BCC00828D6AD</key>
-		<string>ssh://github.com/manage/ios-sdk-sample-app.git</string>
+		<string>github.com:manage/ios-sdk-sample-app.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SampleApp.xcodeproj/project.xcworkspace</string>
+	<string>SampleApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>34FB593E8AD806CA4A2DF2B6DBE5BCC00828D6AD</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/manage/ios-sdk-sample-app.git</string>
+	<string>github.com:manage/ios-sdk-sample-app.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
