@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4EF7F2CA19DD6D570018FD9F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2C919DD6D570018FD9F /* MainStoryboard_iPhone.storyboard */; };
+		6F884E821AE85B8600BC03DF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F884E811AE85B8600BC03DF /* MediaPlayer.framework */; };
+		6F884E841AE85BA400BC03DF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F884E831AE85BA400BC03DF /* WebKit.framework */; };
+		6F884E861AE85BD700BC03DF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F884E851AE85BD700BC03DF /* CoreFoundation.framework */; };
+		6F884E881AE85C0500BC03DF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F884E871AE85C0500BC03DF /* CoreMedia.framework */; };
+		6F884E8A1AE85C2400BC03DF /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F884E891AE85C2400BC03DF /* CoreVideo.framework */; };
+		6F884E8C1AE85C5800BC03DF /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F884E8B1AE85C5800BC03DF /* EventKit.framework */; };
+		6F884E8E1AE85C6500BC03DF /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F884E8D1AE85C6500BC03DF /* EventKitUI.framework */; };
+		6F884E901AE85C9D00BC03DF /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F884E8F1AE85C9D00BC03DF /* VideoToolbox.framework */; };
 		A759217A18F6016C009381D4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A759217918F6016C009381D4 /* libz.dylib */; };
 		A759217C18F60173009381D4 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A759217B18F60173009381D4 /* libstdc++.dylib */; };
 		A759217E18F6017E009381D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A759217D18F6017E009381D4 /* AudioToolbox.framework */; };
@@ -50,6 +58,14 @@
 
 /* Begin PBXFileReference section */
 		4EF7F2C919DD6D570018FD9F /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		6F884E811AE85B8600BC03DF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		6F884E831AE85BA400BC03DF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		6F884E851AE85BD700BC03DF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		6F884E871AE85C0500BC03DF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		6F884E891AE85C2400BC03DF /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		6F884E8B1AE85C5800BC03DF /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		6F884E8D1AE85C6500BC03DF /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		6F884E8F1AE85C9D00BC03DF /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		A759217918F6016C009381D4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A759217B18F60173009381D4 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		A759217D18F6017E009381D4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -90,6 +106,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F884E901AE85C9D00BC03DF /* VideoToolbox.framework in Frameworks */,
+				6F884E8E1AE85C6500BC03DF /* EventKitUI.framework in Frameworks */,
+				6F884E8C1AE85C5800BC03DF /* EventKit.framework in Frameworks */,
+				6F884E8A1AE85C2400BC03DF /* CoreVideo.framework in Frameworks */,
+				6F884E881AE85C0500BC03DF /* CoreMedia.framework in Frameworks */,
+				6F884E861AE85BD700BC03DF /* CoreFoundation.framework in Frameworks */,
+				6F884E841AE85BA400BC03DF /* WebKit.framework in Frameworks */,
+				6F884E821AE85B8600BC03DF /* MediaPlayer.framework in Frameworks */,
 				A7977F5018F716BA00434F51 /* QuartzCore.framework in Frameworks */,
 				A759219218F601BE009381D4 /* CoreMotion.framework in Frameworks */,
 				A759219018F601B9009381D4 /* SystemConfiguration.framework in Frameworks */,
@@ -143,6 +167,14 @@
 		A7A765C318F5EAB800636B04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F884E8F1AE85C9D00BC03DF /* VideoToolbox.framework */,
+				6F884E8D1AE85C6500BC03DF /* EventKitUI.framework */,
+				6F884E8B1AE85C5800BC03DF /* EventKit.framework */,
+				6F884E891AE85C2400BC03DF /* CoreVideo.framework */,
+				6F884E871AE85C0500BC03DF /* CoreMedia.framework */,
+				6F884E851AE85BD700BC03DF /* CoreFoundation.framework */,
+				6F884E831AE85BA400BC03DF /* WebKit.framework */,
+				6F884E811AE85B8600BC03DF /* MediaPlayer.framework */,
 				A759219118F601BE009381D4 /* CoreMotion.framework */,
 				A759218F18F601B9009381D4 /* SystemConfiguration.framework */,
 				A759218D18F601B2009381D4 /* Accelerate.framework */,
@@ -447,6 +479,7 @@
 				GCC_PREFIX_HEADER = "SampleApp/SampleApp-Prefix.pch";
 				INFOPLIST_FILE = "SampleApp/SampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,6 +503,7 @@
 				GCC_PREFIX_HEADER = "SampleApp/SampleApp-Prefix.pch";
 				INFOPLIST_FILE = "SampleApp/SampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,7 +514,6 @@
 		A7A765FA18F5EAB800636B04 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SampleApp.app/SampleApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -496,7 +529,7 @@
 				);
 				INFOPLIST_FILE = "SampleAppTests/SampleAppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleApp.app/SampleApp";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -504,7 +537,6 @@
 		A7A765FB18F5EAB800636B04 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SampleApp.app/SampleApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -516,7 +548,7 @@
 				GCC_PREFIX_HEADER = "SampleApp/SampleApp-Prefix.pch";
 				INFOPLIST_FILE = "SampleAppTests/SampleAppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleApp.app/SampleApp";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

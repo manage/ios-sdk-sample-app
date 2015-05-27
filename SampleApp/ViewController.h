@@ -6,9 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AppSponsorSDK/ASPopupAd.h>
+#import <ManageSDK/MNGInterstitialAd.h>
 
-@interface ViewController : UIViewController<ASPopupAdDelegate>
+@interface ViewController : UIViewController<MNGInterstitialAdDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *callbackLogs;
 

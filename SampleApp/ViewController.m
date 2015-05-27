@@ -31,11 +31,11 @@
 
 
 @interface ViewController () <CLLocationManagerDelegate>
-@property(nonatomic, strong) ASPopupAd * controller_1;
-@property(nonatomic, strong) ASPopupAd * controller_2;
-@property(nonatomic, strong) ASPopupAd * controller_3;
-@property(nonatomic, strong) ASPopupAd * controller_4;
-@property(nonatomic, strong) ASPopupAd * controller_5;
+@property(nonatomic, strong) MNGInterstitialAd * controller_1;
+@property(nonatomic, strong) MNGInterstitialAd * controller_2;
+@property(nonatomic, strong) MNGInterstitialAd * controller_3;
+@property(nonatomic, strong) MNGInterstitialAd * controller_4;
+@property(nonatomic, strong) MNGInterstitialAd * controller_5;
 @property(nonatomic) int adCount;
 
 @property(nonatomic) int adType;
@@ -54,12 +54,12 @@
     //    locationManager.delegate = self;
     [locationManager startUpdatingLocation];
     
-    NSMutableDictionary *options = [NSMutableDictionary dictionary];
+   // NSMutableDictionary *options = [NSMutableDictionary dictionary];
     
     //    [options setObject:@"NO" forKey:@"precache_at_init"];
     //[options setObject:@"USA" forKey:@"country"];
     
-    self.controller_1 = [[[ASPopupAd alloc] enableLocationSupport] initWithZoneId:AD_ZONE_1];
+    self.controller_1 = [[[MNGInterstitialAd alloc] enableLocationSupport] initWithZoneId:AD_ZONE_1];
     self.controller_1.parentController = self;
     
     
@@ -68,11 +68,11 @@
     [options2 setObject:@"NO" forKey:@"precache_at_init"];
     [options2 setObject:@"USA" forKey:@"country"];
     
-    self.controller_2 = [[ASPopupAd alloc] initWithZoneId:AD_ZONE_2];
+    self.controller_2 = [[MNGInterstitialAd alloc] initWithZoneId:AD_ZONE_2];
     
-    self.controller_3 = [[ASPopupAd alloc] initRewardedAdWithZoneId:AD_ZONE_3 andUserID:@"PUBLISHER_ID_123"];
-    self.controller_4 = [[ASPopupAd alloc] initRewardedAdWithZoneId:AD_ZONE_4 andUserID:@"PUBLISHER_ID_123"];
-    self.controller_5 = [[ASPopupAd alloc] initRewardedAdWithZoneId:AD_ZONE_5 andUserID:@"PUBLISHER_ID_123"];
+    self.controller_3 = [[MNGInterstitialAd alloc] initRewardedAdWithZoneId:AD_ZONE_3 andUserID:@"PUBLISHER_ID_123"];
+    self.controller_4 = [[MNGInterstitialAd alloc] initRewardedAdWithZoneId:AD_ZONE_4 andUserID:@"PUBLISHER_ID_123"];
+    self.controller_5 = [[MNGInterstitialAd alloc] initRewardedAdWithZoneId:AD_ZONE_5 andUserID:@"PUBLISHER_ID_123"];
     
     self.controller_1.delegate = self; //important
     self.controller_2.delegate = self; //important
@@ -83,7 +83,7 @@
     
     self.adCount = 0;
     
-    self.labSDKVersion.text = AS_SDK_VERSION;
+    self.labSDKVersion.text = MNG_SDK_VERSION;
 }
 
 - (void)didReceiveMemoryWarning
