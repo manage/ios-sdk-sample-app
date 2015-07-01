@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0104F5401B42FFAF00EB2EA8 /* ManageSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0104F53F1B42FFAF00EB2EA8 /* ManageSDK.framework */; };
+		019FD8C21B43D947006D1AAD /* ManageSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019FD8C11B43D947006D1AAD /* ManageSDK.framework */; };
 		4EF7F2CA19DD6D570018FD9F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF7F2C919DD6D570018FD9F /* MainStoryboard_iPhone.storyboard */; };
 		6F884E821AE85B8600BC03DF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F884E811AE85B8600BC03DF /* MediaPlayer.framework */; };
 		6F884E841AE85BA400BC03DF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F884E831AE85BA400BC03DF /* WebKit.framework */; };
@@ -56,7 +58,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0104F5431B42FFD800EB2EA8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0104F53F1B42FFAF00EB2EA8 /* ManageSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManageSDK.framework; path = "/Users/andrey_bolshakov/Downloads/ios-sdk-sample-app-master/SampleApp/ManageSDK.framework"; sourceTree = "<absolute>"; };
+		019FD8C11B43D947006D1AAD /* ManageSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ManageSDK.framework; sourceTree = "<group>"; };
 		4EF7F2C919DD6D570018FD9F /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		6F884E811AE85B8600BC03DF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		6F884E831AE85BA400BC03DF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -111,6 +128,7 @@
 				6F884E8C1AE85C5800BC03DF /* EventKit.framework in Frameworks */,
 				6F884E8A1AE85C2400BC03DF /* CoreVideo.framework in Frameworks */,
 				6F884E881AE85C0500BC03DF /* CoreMedia.framework in Frameworks */,
+				0104F5401B42FFAF00EB2EA8 /* ManageSDK.framework in Frameworks */,
 				6F884E861AE85BD700BC03DF /* CoreFoundation.framework in Frameworks */,
 				6F884E841AE85BA400BC03DF /* WebKit.framework in Frameworks */,
 				6F884E821AE85B8600BC03DF /* MediaPlayer.framework in Frameworks */,
@@ -127,6 +145,7 @@
 				A759217E18F6017E009381D4 /* AudioToolbox.framework in Frameworks */,
 				A759217C18F60173009381D4 /* libstdc++.dylib in Frameworks */,
 				A759217A18F6016C009381D4 /* libz.dylib in Frameworks */,
+				019FD8C21B43D947006D1AAD /* ManageSDK.framework in Frameworks */,
 				A7A765C918F5EAB800636B04 /* UIKit.framework in Frameworks */,
 				A7A765C718F5EAB800636B04 /* CoreGraphics.framework in Frameworks */,
 				A7A765C518F5EAB800636B04 /* Foundation.framework in Frameworks */,
@@ -148,6 +167,7 @@
 		A7A765B818F5EAB800636B04 = {
 			isa = PBXGroup;
 			children = (
+				019FD8C11B43D947006D1AAD /* ManageSDK.framework */,
 				A7A765CA18F5EAB800636B04 /* SampleApp */,
 				A7A765EC18F5EAB800636B04 /* SampleAppTests */,
 				A7A765C318F5EAB800636B04 /* Frameworks */,
@@ -251,6 +271,7 @@
 				A7A765BD18F5EAB800636B04 /* Sources */,
 				A7A765BE18F5EAB800636B04 /* Frameworks */,
 				A7A765BF18F5EAB800636B04 /* Resources */,
+				0104F5431B42FFD800EB2EA8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -474,12 +495,22 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SampleApp",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleApp/SampleApp-Prefix.pch";
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = "SampleApp/SampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				"OTHER_LDFLAGS[arch=*]" = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -498,11 +529,18 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SampleApp",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleApp/SampleApp-Prefix.pch";
+				GENERATE_MASTER_OBJECT_FILE = YES;
 				INFOPLIST_FILE = "SampleApp/SampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
