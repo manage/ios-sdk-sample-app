@@ -27,7 +27,7 @@
 
     // Initialize Ad Zone
     self.adController = [[MNGInterstitialAd alloc] initWithZoneId: AD_ZONE];
-    
+
     // Load and Present Ad
     [self.adController loadAndPresentAd];
 }

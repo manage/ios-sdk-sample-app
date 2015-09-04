@@ -1,10 +1,9 @@
 ##Manage iOS SDK
 
-
 This is the Manage Publisher Mobile Ads SDK for iOS
 
-Modified: 2014/10
-SDK Version: 3.1
+Modified: 2015/09
+SDK Version: 3.3
 
 ###Contains:
 ----------------------------------
@@ -17,11 +16,11 @@ SDK Version: 3.1
 * iOS version 6.0 or greater
 * Runs only devices with iOS 6.0 or higher
 
-###3.1 Change Log:
+###3.3 Change Log:
 ----------------------------------
-* minor bug fixes
-* Added loadAndPresent()
-* iOS 8 Support
+* iOS9 Support
+* Cleanup of unrequired Frameworks
+* Smaller SDK footprint size
 
 ###Sample App:
 ----------------------------------
@@ -34,7 +33,7 @@ Manage sdk.
 You must accept the terms and conditions on the Manage web portal by registering in order to legally use the
 Manage Publisher SDK.
 
-###Contact Us: 
+###Contact Us:
 ----------------------------------
 For more information, please visit Manage.com.  For questions or support, please emails us at
 [pub-support@manage.com](mailto:pub-support@manage.com).

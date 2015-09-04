@@ -5,7 +5,7 @@
 //  Created by frank wang on 3/31/14.
 //  Copyright (c) 2014 manage. All rights reserved.
 //
-#define MNG_SDK_VERSION                 @"3.2.1"
+#define MNG_SDK_VERSION                 @"3.3"
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

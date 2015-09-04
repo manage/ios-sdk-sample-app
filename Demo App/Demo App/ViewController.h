@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ManageSDK/MNGInterstitialAd.h>
+#import <ManageSDK/ManageSDK.h>
 
 @interface ViewController : UIViewController<MNGInterstitialAdDelegate>
 
