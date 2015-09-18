@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300B5D741BACAF4300BCC73A /* ManageSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300B5D731BACAF4300BCC73A /* ManageSDK.framework */; settings = {ASSET_TAGS = (); }; };
 		306CEA5A1B4D904E000B083F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 306CEA591B4D904E000B083F /* main.m */; };
 		306CEA5D1B4D904E000B083F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 306CEA5C1B4D904E000B083F /* AppDelegate.m */; };
 		306CEA601B4D904E000B083F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 306CEA5F1B4D904E000B083F /* ViewController.m */; };
@@ -23,7 +24,6 @@
 		306CEA9E1B4D90CD000B083F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306CEA9D1B4D90CD000B083F /* CoreLocation.framework */; };
 		306CEAA61B4D90E8000B083F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306CEAA51B4D90E8000B083F /* CoreFoundation.framework */; };
 		306CEAAC1B4D90FA000B083F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306CEAAB1B4D90FA000B083F /* AdSupport.framework */; };
-		308F27BC1B9A1F3800BA8A71 /* ManageSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308F27BB1B9A1F3800BA8A71 /* ManageSDK.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300B5D731BACAF4300BCC73A /* ManageSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ManageSDK.framework; sourceTree = "<group>"; };
 		306CEA541B4D904E000B083F /* Demo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		306CEA581B4D904E000B083F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306CEA591B4D904E000B083F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		306CEA9D1B4D90CD000B083F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		306CEAA51B4D90E8000B083F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		306CEAAB1B4D90FA000B083F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		308F27BB1B9A1F3800BA8A71 /* ManageSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ManageSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 				306CEA901B4D90A0000B083F /* MediaPlayer.framework in Frameworks */,
 				306CEA861B4D9079000B083F /* StoreKit.framework in Frameworks */,
 				306CEA841B4D9074000B083F /* SystemConfiguration.framework in Frameworks */,
-				308F27BC1B9A1F3800BA8A71 /* ManageSDK.framework in Frameworks */,
+				300B5D741BACAF4300BCC73A /* ManageSDK.framework in Frameworks */,
 				306CEA7E1B4D9060000B083F /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,7 +98,7 @@
 				306CEA9D1B4D90CD000B083F /* CoreLocation.framework */,
 				306CEA971B4D90B7000B083F /* EventKit.framework */,
 				306CEA951B4D90B1000B083F /* EventKitUI.framework */,
-				308F27BB1B9A1F3800BA8A71 /* ManageSDK.framework */,
+				300B5D731BACAF4300BCC73A /* ManageSDK.framework */,
 				306CEA8F1B4D90A0000B083F /* MediaPlayer.framework */,
 				306CEA851B4D9079000B083F /* StoreKit.framework */,
 				306CEA831B4D9074000B083F /* SystemConfiguration.framework */,
