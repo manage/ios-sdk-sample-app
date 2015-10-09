@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+        
     // Initialize Ad Zone
     self.adController = [[MNGInterstitialAd alloc] initWithZoneId: AD_ZONE];
 
