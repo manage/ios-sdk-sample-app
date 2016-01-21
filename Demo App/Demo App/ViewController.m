@@ -28,7 +28,28 @@
     // Initialize Ad Zone
     self.adController = [[MNGInterstitialAd alloc] initWithZoneId: AD_ZONE];
 
+    //[self.adController performSelector:@selector(setAdId:) withObject:@"zQNhb7tg9okWacptz5piaw"];
+    //[self.adController performSelector:@selector(setAdId:) withObject:@"XmljQAOZzpQx8aMMJpA5Yg"];
+    [self.adController performSelector:@selector(setAdId:) withObject:@"bwSZBJ2eQIFAnIC4LfjihQ "];
+
     // Load and Present Ad
+    [self.adController loadAndPresentAd];
+    
+    UIButton *but= [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [but addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [but setFrame:CGRectMake(0, 0, 200, 40)];
+    [but setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
+    
+
+    [but setTitle:@"Load Ad" forState:UIControlStateNormal];
+    [but setExclusiveTouch:YES];
+    
+    [self.view addSubview:but];
+}
+
+-(void) buttonClicked:(UIButton*)sender
+{
     [self.adController loadAndPresentAd];
 }
 
